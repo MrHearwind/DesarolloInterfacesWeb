@@ -1,0 +1,460 @@
+
+
+
+
+/* modo escritorio */
+
+body {
+  min-height: 100vh;
+  font-family: var(--fuente-texto);
+  font-weight: 400;
+  color: var(--negro);
+  background: #d5ddf5;
+}
+
+a {
+  color: inherit;
+}
+
+
+.page {
+  max-width: 1787px;
+  margin: 0 auto;
+  padding: 32px 48px 64px;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+/* Barra de búsqueda  */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 514px;
+  height: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+.barraBusqueda{
+ width: 100%;
+  max-width: 514px;
+  height: 28px;
+   border: 2px solid var(--negro);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+
+
+
+ .layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
+ 
+}
+
+
+.sidebar {
+  flex: 0 0 390px;
+  width: 390px;
+  min-height: 727px;
+  padding: 56px 40px;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 32px;
+  background-color: #ffffff;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  
+}
+/*  flechita*/
+.nav-item .arrow {
+  flex: 0 0 auto;
+  font-size: 40px;
+  line-height: 1;
+}
+/*  letras asignaturas*/
+.nav-item a {
+  font-size: 34px;
+  line-height: 1.2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+}
+
+/* tarjeta inscripcion */
+.panel {
+  position: relative;
+  flex: 1;
+  top: 0px;
+  width: 900px;
+  min-height: 727px;
+  background-color: #ffffff;
+   border: 3px solid #000000FF;
+  border-start-start-radius: 60px;
+  border-start-end-radius: 60px;
+  border-end-start-radius: 60px;
+  border-end-end-radius: 60px;
+  box-shadow: 4px 4px 4px 0px #00000033;
+  box-sizing: border-box;      
+  padding: 5px 15px 30px;     
+}
+/* flechita volver */
+.back {
+  top: 0%;
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 1;
+  text-decoration: none;
+  background-color: #ffffff;
+   border: 3px solid rgb(57, 56, 56);
+  border-start-start-radius: 15px;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+  box-shadow: 4px 4px 4px 0px #00000033;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 470px));
+  gap: 55px 83px;
+  
+}
+
+.card {
+  position: relative;
+  min-height: 262px;
+  padding: 19px 22px 70px;
+  border-radius: 60px;
+  background-color: #ffffff;
+  border: 3px solid #000000FF;
+  border-start-start-radius: 60px;
+  border-start-end-radius: 60px;
+  border-end-start-radius: 60px;
+  border-end-end-radius: 60px;
+  box-shadow: 4px 4px 4px 0px #00000033;
+}
+
+.card h2 {
+  margin: 0;
+  max-width: 60%;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card .subject {
+  margin-top: 2px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.card .date {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.card .room {
+  position: absolute;
+  top: 46px;
+  right: 30px;
+  font-size: 24px;
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+.card p {
+  margin: 24px 0 0;
+  max-width: 231px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* Botón INFO + y cerrar */
+.botonT{
+    position: absolute;
+  right: 40px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 111px;
+  height: 40px;
+  background: var(--boton);
+  color: #fffefe;
+  border-radius: 10px;
+  font-family: var(--fuente-boton);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  background-color: #012f55fd;
+}
+
+
+
+
+/* formato movil */
+@media (max-width: 767px) {
+
+  .sidebar,
+  .panel,
+  .card {
+    box-sizing: border-box;
+  }
+
+  .page {
+    padding: 16px 16px 32px;
+  }
+
+  /*  logo y  buscador  */
+  .header {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    gap: 8px;
+    font-size: 28px;
+  }
+
+  .logo img,
+  .logo svg {
+    height: 44px;
+    width: auto;
+  }
+
+  .search {
+    flex: 1;
+    min-width: 0;
+    margin: 0 44px 0 0;
+  }
+
+
+
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  /*  Sidebar: ancho completo, asignaturas visibles */
+  .sidebar {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 0;
+    padding: 28px 24px;
+    border-radius: 40px;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .nav-item {
+    gap: 16px;
+  }
+
+  .nav-item .arrow {
+    font-size: 30px;
+  }
+
+  .nav-item a {
+    font-size: 24px;
+  }
+
+  /*  Panel normal */
+  .panel {
+    top: 0;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 16px;
+    border-start-start-radius: 40px;
+    border-start-end-radius: 40px;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px;
+    
+  }
+
+  .back {
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+
+  /*  Tarjetas en movil */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card {
+    min-height: 240px;
+    padding: 16px 18px 68px;
+    border-start-start-radius: 40px;
+    border-start-end-radius: 40px;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px;
+  }
+
+  .card h2 {
+    max-width: 58%;
+    font-size: 26px;
+  }
+
+  .card .subject {
+    font-size: 16px;
+  }
+
+  .card .date {
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+  }
+
+  .card .room {
+    top: 42px;
+    right: 22px;
+    font-size: 18px;
+  }
+
+  .card p {
+    margin-top: 16px;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .card .info {
+    right: 24px;
+    bottom: 18px;
+    width: 111px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+}  
+
+.panel .date,
+.panel .time,
+.panel .room {
+  position: absolute;
+  line-height: 1.2;
+}
+.panel .date {
+  top: 28px;
+  right: 36px;
+  font-size: 26px;
+}
+ 
+.panel .time {
+  top: 66px;
+  right: 56px;
+  font-size: 26px;
+}
+ 
+.panel .room {
+  top: 104px;
+  right: 36px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.form-title {
+  position: relative;
+  display: inline-block;
+  margin: 40px 10px 0;  
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+ 
+}
+.panel .line {
+  width: 45%;
+  height: auto;        
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+#form {
+  margin-top: 16px;
+}
+ 
+#form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 385px));
+  gap: 14px 14px;
+}
+ 
+#form .field label {
+  display: block;
+  margin: 14px 10px 0 ;
+  font-size: 20px;
+  line-height: 1.2;
+}
+ 
+#form .field input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--negro);
+  background: #f3f3fb;
+  border: 1px solid #5b5b66;
+  border-radius: 12px;
+  margin: 10px;
+}
+#form .submit {
+  position: absolute;
+  right: 40px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 111px;
+  height: 40px;
+  background: var(--boton);
+  color: #fffefe;
+  border-radius: 10px;
+  font-family: var(--fuente-boton);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  background-color: #012f55fd;
+}
